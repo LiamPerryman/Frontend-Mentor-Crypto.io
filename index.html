@@ -1,0 +1,246 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | NFT preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+    .attribution { 
+      font-size: 11px; text-align: center;
+   }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    :root {
+      /* ## Colors
+
+      ### Primary */
+
+      --Soft-blue: hsl(215, 51%, 70%);
+      --Cyan: hsl(178, 100%, 50%);
+
+      /* ### Neutral */
+
+      --main-BG:hsl(217, 54%, 11%);
+      --card-BG: hsl(216, 50%, 16%);
+      --line: hsl(215, 32%, 27%);
+      --White: hsl(0, 0%, 100%);
+    }
+     /* Main */
+    * {
+      margin: 0;
+      padding: 0;
+      line-height: 1.2;
+      box-sizing: border-box;
+      font-family: 'Outfit',sans-serif;
+    }
+
+    body {
+      background: var(--main-BG);
+      min-height: 100vh;
+    }
+    p {
+      font-size: 18px;
+    }
+
+      .center {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+      
+    }
+
+    .equilibrium .logo {
+      height: 100%;
+      width: 100%;
+      border-radius: 10px;
+      max-width: auto;
+      max-height: auto;
+      margin-top: 10px;
+    
+    }
+    .equilibrium {
+     position: relative;
+     cursor: pointer;
+    }
+    
+    .eye {
+    position: absolute;
+    top: 43%;
+    left: 43%;
+    
+    }
+    .overlay {
+      position: absolute;
+      top: 10px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: var(--Cyan);
+      height: 100%;
+      width: 100%;
+      opacity:.0 ;
+      transition: .5s ease-in;
+      border-radius:10px;
+      
+    }
+
+    .equilibrium:hover .overlay {
+      opacity: .5;
+      
+    }
+
+
+    
+    
+    .container {
+      display: flex;
+      background: var(--card-BG);
+      overflow:hidden;
+      height: 570px;
+      width: 325px;
+      text-align: center;
+      border-radius: 10px;
+      flex-direction: column;
+     
+      
+    }
+
+    .etherium-price p {
+      font-weight: 600;
+      color: var(--Cyan);
+      font-size: 15PX;
+      
+    }
+
+    .days-left p {
+      font-weight: 300;
+      color: var(--Soft-blue);
+      font-size: 15PX;
+    }
+
+    .summary p {
+      color: var(--Soft-blue);
+      font-weight: lighter;
+      font-size: 17px;
+    }
+    .name {
+      color: var(--White);
+      font-size: 14px;
+    }
+    .name:hover {
+      color: var(--Cyan);
+      font-size: 14px;
+      cursor: pointer;
+      transition: .5s ease-in;
+    }
+    .price-row {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: center;
+      align-items: center;
+      position: relative;
+    
+      margin-left: 30px;
+    }
+    .price-row img{
+      height: 13px;
+      margin-right: 5px;
+
+    }
+
+    .box {
+    text-align: left;
+      margin: 11px 20px;
+    }
+
+    .avatar {
+      max-width: auto;
+      max-height: auto;
+      height: 30px;
+      width: 30px;
+      border: 1px white solid;
+      border-radius: 50%;
+      margin-right: 15px;
+    }
+    .creator {
+      display: flex;
+      text-align: center;
+      align-items: center;
+      justify-content: start;
+      border-top: 1px solid var(--line);
+      padding-top: 25px;
+    }
+    .creator p {
+     font-size: 15px;
+     color: var(--Soft-blue);
+    }
+    .creator p span {
+     font-size: 15px;
+     color: var(--White);
+     font-weight: lighter;
+    }
+    .creator p span:hover{
+     font-size: 15px;
+     color: var(--Cyan);
+     font-weight: lighter;
+     transition: .5s ease-in;
+     cursor: pointer;
+    }
+
+   
+  </style>
+</head>
+<body>
+  <article class="center">
+    <div class="container">
+     
+      <div class="equilibrium box">  
+        <img class="logo" src="./images/image-equilibrium.jpg" alt="">         
+        <div class="overlay">
+            <div class="eye"> 
+              <img src="./images/icon-view.svg" alt="">
+        
+            </div>
+          </div>
+      </div>
+      
+      
+      <div class="name box">
+        <h1>Equilibrium #3429</h1>
+      </div>
+        <div class="summary box">
+          <p>Our Equilibrium collection promotes balance and calm.</p>
+        </div>
+
+      <div class="price-row box">
+        <div class="etherium-price">
+         <p><i><img src="./images/icon-ethereum.svg" alt=""></i>0.041 ETH</p>
+        </div>
+          <div class="days-left " >
+            <p><i><img src="./images/icon-clock.svg" alt=""></i> 3 days left</p>
+          </div>
+       </div>
+
+         <div class="creator box">
+          <img class="avatar" src="./images/image-avatar.png" alt="">
+        <p>Creation of <span>Jules Wyvern</span></p>
+    </div>
+  
+  </div>
+  
+</article>
+<div class="attribution" style="margin: -150px;">
+  Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+  Coded by <a href="#">liam</a>.
+  </div>
+</body>
+</html>
